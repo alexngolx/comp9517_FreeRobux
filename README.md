@@ -96,8 +96,11 @@ This method employs a traditional computer vision approach using HOG features co
   - 8×8 pixels per cell
   - 2×2 cells per block
   - L2-Hys block normalization
-- **Preprocessing pipeline:** Images are resized to 128×128, converted to grayscale, Gaussian blur is applied, and Contrast Limited Adaptive Histogram Equalization (CLAHE) is used for contrast enhancement
 - **SVM classifier** for classification
+
+**Training Configuration:**
+- **Preprocessing pipeline:** Images are resized to 128×128, converted to grayscale, Gaussian blur is applied, and Contrast Limited Adaptive Histogram Equalization (CLAHE) is used for contrast enhancement
+- **Hyperparameter tuning:** Unfortunately, due to the complexity and length of training, cross-validation was not used to perform hyper-parameter tuning. Instead, iterative A/B testing was adopted to iteratively explore the hyperparameter space and maximise model performance.
 
 The notebook extracts regions of interest (ROIs) from YOLO bounding boxes, computes HOG features, and provides top-3 class predictions with probability scores.
 
