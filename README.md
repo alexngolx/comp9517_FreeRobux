@@ -47,6 +47,43 @@ comp9517_FreeRobux/
     └── yolov5 analysis.ipynb              # YOLOv5 training, validation, and analysis
 ```
 
+## Collaboration Workflow
+
+This project was developed collaboratively using a feature branch workflow with pull requests. The development process followed these steps:
+
+### Branching Strategy
+
+Each major feature or method implementation was developed in its own feature branch:
+- `feature/Retinanet` - RetinaNet model implementation
+- `feature/YOLOv5` - YOLOv5 model implementation  
+- `feature/lbp_rf` - Local Binary Patterns with Random Forest implementation
+- `svm-branch` - Histogram of Oriented Gradients with Support Vector Machine implementation
+
+### Development Process
+
+1. **Create Feature Branch:** Each team member created a new branch from `main` for their assigned method:
+   ```bash
+   git checkout -b feature/method-name
+   ```
+
+2. **Development:** Work was conducted independently on each feature branch, allowing parallel development without conflicts.
+
+3. **Pull Request:** Once a feature was complete and tested, a pull request (PR) was created to merge the feature branch into `main`.
+
+4. **Code Review:** Pull requests were reviewed by team members before merging to ensure code quality and consistency.
+
+5. **Merge to Main:** After approval, feature branches were merged into `main` via pull requests, maintaining a clean and organized commit history.
+
+### Merged Features
+
+The following features were successfully merged into the main branch:
+- **PR #1:** RetinaNet implementation (`feature/Retinanet` → `main`)
+- **PR #2:** YOLOv5 implementation (`feature/YOLOv5` → `main`)
+- **PR #4:** HOG-SVM implementation (`svm-branch` → `main`)
+- **PR #5:** LBP-RF implementation (`feature/lbp_rf` → `main`)
+
+This workflow enabled parallel development of different methods while maintaining code quality and project organization throughout the development lifecycle.
+
 ## Methods Implemented
 
 ### 1. Histogram of Oriented Gradients with Support Vector Machine (HOG-SVM)
